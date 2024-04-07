@@ -1,11 +1,314 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nikedas</title>
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/3e6ff9a951.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/bootstrap-5.3.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-    <h1>Pagina producto</h1>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand pe-3 ms-4" href="#">
+                <img src="assets/images/logo.png" alt="Bootstrap" width="56">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="categoria.html">Ofertas</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Marcas
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="categoria.html">Adidas</a></li>
+                            <li><a class="dropdown-item" href="categoria.html">Nike</a></li>
+                            <li><a class="dropdown-item" href="categoria.html">Jordan</a></li>
+                            <li><a class="dropdown-item" href="categoria.html">Puma</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Categorías
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="categoria.html">Estilo de vida</a></li>
+                            <li><a class="dropdown-item" href="categoria.html">Futbol</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center">
+
+                    <li class="nav-item d-flex">
+                        <input class="form-control me-2 ms-4" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-secondary" type="submit">Search</button>
+                    </li>
+
+                    <li class="nav-item ms-4 me-4 shopping-cart">
+                        <a href="#">
+                            <i class="fa-solid fa-cart-shopping text-body-secondary"></i>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img src="assets/images/productos/producto1b.webp" class="img-fluid">
+                </div>
+                <div class="col-12 col-md-6">
+                    <h3 class="producto-modelo">Air Max Pulse</h3>
+                    <p class="text-body-secondary producto-marca mb-2">Nike</p>
+                    <p class="producto-descripcion mb-2">Descripción del producto</p>
+                    <p class="text-body-emphasis producto-precio mb-3 fw-medium">$150.000</p>
+                    <div class="producto-tallas">
+                        <div class="producto-tallas-text d-flex justify-content-between">
+                            <p class="producto-tallas">Tallas disponibles</p>
+                            <a data-bs-toggle="modal" data-bs-target="#modalTallas">
+                                <p class="text-decoration-underline text-body-secondary">Guía de tallas</p>
+                            </a>
+                            <!-- Modal -->
+                            <div class="modal fade " id="modalTallas" tabindex="-1" aria-labelledby="modalTallasLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-xl modal-dialog-scrollable modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="modalTallasLabel">Guía de tallas</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="assets/images/guia-tallas-nike.webp" class="img-fluid">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Cerrar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2 flex-wrap p-3" aria-label="Basic example">
+                            <button type="button mb-2" class="btn btn-outline-secondary">36</button>
+                            <button type="button mb-2" class="btn btn-outline-secondary">37</button>
+                            <button type="button mb-2" class="btn btn-outline-secondary">38</button>
+                            <button type="button mb-2" class="btn btn-outline-secondary">39</button>
+                            <button type="button mb-2" class="btn btn-outline-secondary">40</button>
+                            <button type="button mb-2" class="btn btn-outline-secondary">41</button>
+                            <button type="button mb-2" class="btn btn-outline-secondary">42</button>
+                            <button type="button mb-2" class="btn btn-outline-secondary">43</button>
+                            <button type="button mb-2" class="btn btn-outline-secondary">44</button>
+                            <button type="button mb-2" class="btn btn-outline-secondary">45</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-dark mb-2">Agregar al carrito</button>
+
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    Devoluciones y envíos
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    Entregas a todo el país. Consulta la fecha estimada de entrega al realizar la
+                                    compra. Puedes devolver tu pedido por cualquier motivo, sin cargo, dentro de un
+                                    plazo de 30 días.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    Métodos de pago
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    Queremos que la compra por internet de tu calzado y equipo favoritos sea una
+                                    experiencia rápida y sencilla, por lo que aceptamos las siguientes opciones de pago:
+                                    Visa, MasterCard, American Express, Visa Electron, Maestro.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- Carrusel productos relacionados -->
+    <section>
+        <div class="container">
+            <h3>Artículos relacionados</h3>
+        </div>
+        <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="card-wrapper container-sm d-flex  justify-content-around">
+                        <a href="producto.html">
+                            <div class="card" style="max-width: 18rem;">
+                                <img src=" assets/images/productos/producto1a.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-1">Air Max Pulse</h5>
+                                    <p class="card-text text-body-secondary">Nike</p>
+                                    <p class="card-text precio">$150.000</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="producto.html">
+                            <div class="card" style="max-width: 18rem;">
+                                <img src=" assets/images/productos/producto1a.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-1">Air Max Pulse</h5>
+                                    <p class="card-text text-body-secondary">Nike</p>
+                                    <p class="card-text precio">$150.000</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="producto.html">
+                            <div class="card" style="max-width: 18rem;">
+                                <img src=" assets/images/productos/producto1a.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-1">Air Max Pulse</h5>
+                                    <p class="card-text text-body-secondary">Nike</p>
+                                    <p class="card-text precio">$150.000</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card-wrapper container-sm d-flex   justify-content-around">
+                        <a href="producto.html">
+                            <div class="card" style="max-width: 18rem;">
+                                <img src=" assets/images/productos/producto1a.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-1">Air Max Pulse</h5>
+                                    <p class="card-text text-body-secondary">Nike</p>
+                                    <p class="card-text precio">$150.000</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="producto.html">
+                            <div class="card" style="max-width: 18rem;">
+                                <img src=" assets/images/productos/producto1a.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-1">Air Max Pulse</h5>
+                                    <p class="card-text text-body-secondary">Nike</p>
+                                    <p class="card-text precio">$150.000</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="producto.html">
+                            <div class="card" style="max-width: 18rem;">
+                                <img src=" assets/images/productos/producto1a.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-1">Air Max Pulse</h5>
+                                    <p class="card-text text-body-secondary">Nike</p>
+                                    <p class="card-text precio">$150.000</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card-wrapper container-sm d-flex  justify-content-around">
+                        <a href="producto.html">
+                            <div class="card" style="max-width: 18rem;">
+                                <img src=" assets/images/productos/producto1a.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-1">Air Max Pulse</h5>
+                                    <p class="card-text text-body-secondary">Nike</p>
+                                    <p class="card-text precio">$150.000</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="producto.html">
+                            <div class="card" style="max-width: 18rem;">
+                                <img src=" assets/images/productos/producto1a.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-1">Air Max Pulse</h5>
+                                    <p class="card-text text-body-secondary">Nike</p>
+                                    <p class="card-text precio">$150.000</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="producto.html">
+                            <div class="card" style="max-width: 18rem;">
+                                <img src=" assets/images/productos/producto1a.webp" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-1">Air Max Pulse</h5>
+                                    <p class="card-text text-body-secondary">Nike</p>
+                                    <p class="card-text precio">$150.000</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <button class="carousel-control-prev d-none d-lg-block" type="button"
+                    data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next d-none d-lg-block" type="button"
+                    data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-fluid bg-body-secondary">
+            <div class="container footer-container">
+                <div class="footer-logos">
+                    <a href="https://www.duoc.cl/" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a href="https://www.duoc.cl/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.duoc.cl/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+                <p class="footer-text">© 2024 Nikedas Chile</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="./assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
 </body>
+
 </html>

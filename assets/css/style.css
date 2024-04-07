@@ -64,3 +64,8 @@ h3{
     font-size: 2rem;
     color: black;
 }
+
+
+a {
+    cursor: pointer;
+}
