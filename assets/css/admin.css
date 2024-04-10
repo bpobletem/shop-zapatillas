@@ -37,3 +37,19 @@ h3 {
     flex-wrap: wrap;
     gap: .5rem;
 }
+
+.btn-registro  {
+    display: flex;
+    justify-content: end;
+}
+
+form {
+    max-width: 70%;
+    margin: auto;
+}
+
+
+
+.login-form {
+    max-width: 50%;
+}
