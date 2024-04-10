@@ -34,22 +34,6 @@ h3{
 }
 
 
-.card:hover {
-    cursor: pointer;
-    box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.2);
-}
-
-.product-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-
-.order-by ul {
-    font-size: .8rem;
-}
-
 .footer-container {
     text-align: right;
     padding: 2rem;
@@ -63,4 +47,9 @@ h3{
 
 a {
     cursor: pointer;
+}
+
+
+.mask {
+    background-color: rgba(251, 251, 251, 0.2);
 }
