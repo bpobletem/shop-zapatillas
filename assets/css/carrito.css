@@ -1,3 +1,7 @@
+img {
+    width: 100px;
+}
+
 body *{
     box-sizing: border-box;
     margin: 0;
