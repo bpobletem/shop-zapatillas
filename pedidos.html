@@ -78,6 +78,7 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="login.html">Iniciar sesion</a></li>
                             <li><a class="dropdown-item" href="registro.html">Registro</a></li>
+                            <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -89,29 +90,76 @@
 
     <section>
         <div class="container">
-            <h1>Hola, Usurario</h1>
+            <h1>Hola, Usuario</h1>
             <div class="row mt-4">
-                <div class="col-12 col-md-3">
-                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+
+                <!-- Menu lateral -->
+                <div class="col-12 col-md-3 bg-light rounded">
+                    <div class="sidebar p-4 ">
                         <a href="perfil.html">
-                            <button type="button" class="btn btn-secondary">Datos personales</button>
+                            <div class="">Datos personales</div>
                         </a>
+                        <hr class="my-4" />
                         <a href="direcciones.html">
-                            <button type="button" class="btn btn-secondary">Direcciones</button>
+                            <div class="">Direcciones</div>
                         </a>
+                        <hr class="my-4" />
                         <a href="pedidos.html">
-                            <button type="button" class="btn btn-secondary">Pedidos</button>
+                            <div class="">Pedidos</div>
                         </a>
                     </div>
                 </div>
 
                 <div class="col-12 col-md-8">
                     <h2>Mis Pedidos</h2>
-                    <div class="order-card row mt-4">
+                    <div class="order-card row mt-4 pb-3">
+                        <div class="row p-3 rounded">
+                            <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+
+                                <h5><strong>Pedido #123456</strong></h5>
+                            </div>
+                            <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                                <h5><strong>En camino</strong></h5>
+                            </div>
+                        </div>
                         <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
                             <!-- Image -->
-                            <div class="bg-image hover-overlay hover-zoom ripple rounded"
-                                data-mdb-ripple-color="light">
+                            <div class="bg-image ripple rounded" data-mdb-ripple-color="light">
+                                <img src="assets/images/productos/producto1a.webp" class="w-100"
+                                    alt="Blue Jeans Jacket" />
+                                <a href="#!">
+                                    <div class="mask"></div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Data -->
+                        <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                            <p><strong>Nike Air Max Pulse</strong></p>
+                            <p>Color: Negro</p>
+                            <p>Talla: 40</p>
+                        </div>
+                        <!-- Data -->
+
+                        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+
+                            <!-- Boton comprar de nuevo -->
+                            <p class="text-start text-md-center">
+                                <a href="producto.html">    
+                                    <button class="btn btn-primary">Comprar de nuevo</button>
+                                </a>
+                            </p>
+                            <!-- Boton comprar de nuevo -->
+                        </div>
+
+                        <!-- Divisor -->
+                        <hr class="my-4" />
+
+                        <!-- Otro producto del mismo pedido -->
+
+                        <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                            <!-- Image -->
+                            <div class="bg-image ripple rounded" data-mdb-ripple-color="light">
                                 <img src="assets/images/productos/producto1a.webp" class="w-100"
                                     alt="Blue Jeans Jacket" />
                                 <a href="#!">
@@ -122,7 +170,6 @@
 
                         <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
                             <!-- Data -->
-                            <h5><strong>Pedido #123456</strong></h5>
                             <p><strong>Nike Air Max Pulse</strong></p>
                             <p>Color: Negro</p>
                             <p>Talla: 40</p>
@@ -130,16 +177,61 @@
                         </div>
 
                         <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-
-                            <!-- Precio -->
+                            <!-- Boton comprar de nuevo -->
                             <p class="text-start text-md-center">
-                                <strong>$150.000</strong>
+                                <a href="producto.html">    
+                                    <button class="btn btn-primary">Comprar de nuevo</button>
+                                </a>
                             </p>
-                            <!-- Precio -->
+                            <!-- Boton comprar de nuevoado -->
                         </div>
+
                     </div>
-                            
+
+                    <!-- Otro pedido -->
+
+                    <div class="order-card row mt-4 pb-3">
+                        <div class="row p-3 rounded">
+                            <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+
+                                <h5><strong>Pedido #123456</strong></h5>
+                            </div>
+                            <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                                <h5><strong>En camino</strong></h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
+                            <!-- Image -->
+                            <div class="bg-image ripple rounded" data-mdb-ripple-color="light">
+                                <img src="assets/images/productos/producto1a.webp" class="w-100"
+                                    alt="Blue Jeans Jacket" />
+                                <a href="#!">
+                                    <div class="mask"></div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Data -->
+                        <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
+                            <p><strong>Nike Air Max Pulse</strong></p>
+                            <p>Color: Negro</p>
+                            <p>Talla: 40</p>
+                        </div>
+                        <!-- Data -->
+
+                        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+
+                            <!-- Boton comprar de nuevo -->
+                            <p class="text-start text-md-center">
+                                <a href="producto.html">    
+                                    <button class="btn btn-primary">Comprar de nuevo</button>
+                                </a>
+                            </p>
+                            <!-- Boton comprar de nuevo -->
+                        </div>
+
                     </div>
+
                 </div>
             </div>
         </div>

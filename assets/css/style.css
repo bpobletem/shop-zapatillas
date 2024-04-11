@@ -22,7 +22,11 @@ h3{
 }
 
 .shopping-cart {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+}
+
+.profile {
+    font-size: 1.3rem;
 }
 
 .card-wrapper {

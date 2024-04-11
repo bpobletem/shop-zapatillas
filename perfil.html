@@ -64,7 +64,7 @@
                 </ul>
 
                 <ul class="navbar-nav me-5 mb-2 mb-lg-0 d-flex flex-row align-items-center gap-3">
-                    
+
                     <li class="nav-item shopping-cart">
                         <a href="carrito.html">
                             <i class="fa-solid fa-cart-shopping text-body-secondary"></i>
@@ -78,6 +78,7 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="login.html">Iniciar sesion</a></li>
                             <li><a class="dropdown-item" href="registro.html">Registro</a></li>
+                            <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -86,21 +87,23 @@
     </nav>
     <!-- Fin Navbar -->
 
-    
+
     <section>
         <div class="container">
-            <h1>Hola, Usurario</h1>
+            <h1>Hola, Usuario</h1>
             <div class="row mt-4">
-                <div class="col-12 col-md-3">
-                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
-                        <a href="perfil.html"> 
-                            <button type="button" class="btn btn-secondary">Datos personales</button>
+                <div class="col-12 col-md-3 bg-light rounded">
+                    <div class="sidebar p-4 ">
+                        <a href="perfil.html">
+                            <div class="">Datos personales</div>
                         </a>
+                        <hr class="my-4" />
                         <a href="direcciones.html">
-                            <button type="button" class="btn btn-secondary">Direcciones</button>
+                            <div class="">Direcciones</div>
                         </a>
+                        <hr class="my-4" />
                         <a href="pedidos.html">
-                            <button type="button" class="btn btn-secondary">Pedidos</button>
+                            <div class="">Pedidos</div>
                         </a>
                     </div>
                 </div>
@@ -108,26 +111,33 @@
                 <div class="col-12 col-md-8">
                     <h2>Mis Datos</h2>
                     <form class="mt-4">
-                        <h3>Detalles</h3>
                         <div class="mb-3">
-                          <label for="nombre" class="form-label">Nombre y Apellido</label>
-                          <input type="name" class="form-control" id="nombre" aria-describedby="name" placeholder="Usuario">
+                            <label for="nombre" class="form-label">Nombre y Apellido</label>
+                            <input type="name" class="form-control" id="nombre" aria-describedby="name"
+                                placeholder="Usuario">
+                        </div>
+                        <div class="mb-3">
+                            <label for="mail" class="form-label">Correo</label>
+                            <input type="mail" class="form-control" id="mail" aria-describedby="mail"
+                                placeholder="juan@correo.cl">
                         </div>
                         <div class="mb-3">
                             <label for="phone" class="form-label">Telefono</label>
-                            <input type="phone" class="form-control" id="phone" aria-describedby="phone" placeholder="+569 12345678">
+                            <input type="phone" class="form-control" id="phone" aria-describedby="phone"
+                                placeholder="+569 12345678">
                         </div>
                         <div class="mb-3">
                             <label for="rut" class="form-label">RUT</label>
-                            <input type="number" class="form-control" id="rut" aria-describedby="rut" placeholder="201234567">
+                            <input type="number" class="form-control" id="rut" aria-describedby="rut"
+                                placeholder="201234567">
                         </div>
                         <div class="mb-3">
-                          <label for="exampleInputPassword1" class="form-label">Password</label>
-                          <input type="password" class="form-control" id="exampleInputPassword1">
+                            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
                         </div>
                         <div class="mb-3 form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Suscribete a nuestros correos</label>
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Suscribete a nuestros correos</label>
                         </div>
                         <button type="submit" class="btn btn-primary">Guardar cambios</button>
                     </form>
