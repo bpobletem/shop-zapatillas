@@ -129,7 +129,8 @@
 
                                 <div class="col-lg-2 col-md-3 mb-4 mb-lg-0">
                                     <div class="row">
-                                        <button class="btn btn-primary mb-2" data-bs-toggle="modal"
+                                        <!-- Botones editar/eliminar -->
+                                        <button class="btn btn-dark mb-2" data-bs-toggle="modal"
                                             data-bs-target="#exampleModal">Editar</button>
                                         <button class="btn btn-danger" data-bs-toggle="modal"
                                             data-bs-target="#modalEliminar">Eliminar</button>
@@ -150,7 +151,7 @@
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
                                                             data-bs-dismiss="modal">Cancelar</button>
-                                                        <button type="button" class="btn btn-primary">Si, eliminar</button>
+                                                        <button type="button" class="btn btn-danger">Si, eliminar</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -162,9 +163,10 @@
                     </div>
 
                     <div class="row p-4">
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar
+                        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar
                             nueva direccion</button>
 
+                        <!-- Modal para agregar direcciones -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
                             <div class="modal-dialog">
