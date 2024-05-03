@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de Sesión</title>
+    <title>Recuperar Contraseña</title>
     <link rel="stylesheet" href="assets/bootstrap-5.3.3-dist/css/bootstrap.css">
     <script src="https://kit.fontawesome.com/3e6ff9a951.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/admin.css">
@@ -23,57 +23,36 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="text-align: right;">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="admin.html">Inicio</a>
+                        <a class="nav-link" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="totalpedidos.html">Pedidos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="totalusuarios.html">Usuarios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="editar.html">Editar productos</a>
+                        <a class="nav-link" href="registro.html">Registro</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- Fin Navbar -->
 
     <!-- Contenido de la página -->
     <div class="container mt-5">
         <!-- Título del formulario -->
-        <h3 class="text-center mb-4">Inicio de Sesión</h3>
-        <!-- Formulario de inicio de sesión -->
-        <form id="formulario">
+        <h3 class="text-center mb-4">Recuperar Contraseña</h3>
+        <!-- Formulario de recuperación de contraseña -->
+        <form action="index.html" method="POST">
             <div class="mb-3">
                 <label for="correo" class="form-label">Correo Electrónico</label>
                 <input type="email" class="form-control" id="correo" name="correo" required>
             </div>
-            <div class="mb-3">
-                <label for="contraseña" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="contraseña" name="contraseña" required>
-            </div>
-            <!-- Enlace para restablecer contraseña -->
-            <div class="mb-3">
-                <a href="recuperar.html">¿Has olvidado tu contraseña?</a>
-            </div>
             <div class="d-grid gap-2">
-                <button type="button" id="botonIniciarSesion" class="btn btn-dark">Iniciar Sesión</button>
+                <button type="submit" class="btn btn-dark">Enviar Instrucciones</button>
             </div>
         </form>
-        <!-- Mensaje de error -->
-        <p id="mensajeError" style="color: red;"></p>
-        <!-- Fin mensaje de error -->
     </div>
-    <!-- Fin Contenido de la página -->
-
     <!-- Footer -->
     <footer>
         <div class="container-fluid bg-body-secondary">
-
             <div class="container footer-container">
                 <div class="footer-logos">
                     <a href="https://www.duoc.cl/" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
@@ -82,13 +61,18 @@
                 </div>
                 <p class="footer-text">© 2024 Nikedas Chile</p>
             </div>
-
         </div>
     </footer>
-    <!-- Fin Footer -->
 
     <script src="assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
-    <script src="assets/js/validacion.js"></script>
+</body>
+
+</html>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
 </body>
 
 </html>
