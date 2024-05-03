@@ -98,7 +98,7 @@
         <!-- Título del formulario -->
         <h3 id="registro" class="text-center mb-4">Registro de Usuario</h3>
         <!-- Formulario de registro -->
-        <form id="formulario" class="formulario" action="procesar.php" method="">
+        <form id="formulario" class="formulario" action="login.html" method="POST">
             <div class="row">
                 <div class="col-md-6">
                     <div class="mb-3">
@@ -164,22 +164,22 @@
                     <label for="region" class="form-label">Región</label>
                     <select id="region" class="form-control">
                         <option value="">--Selecciona una region--</option>
-                        <option value="biobio">Biobio</option>
-                        <option value="metropolitana">Metropolitana</option>
+                        <option value="biobio" id="biobio">Biobio</option>
+                        <option value="metropolitana" id="metropolitana">Metropolitana</option>
                     </select>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="comuna" class="form-label">Comuna</label>
                     <select id="comuna" class="form-control">
                         <option value="">--Selecciona una comuna--</option>
-                        <option value="biobio">Biobio</option>
-                        <option value="metropolitana">Metropolitana</option>
+                        <option value="biobio" id="biobio">Biobio</option>
+                        <option value="metropolitana" id="metropolitana">Metropolitana</option>
                     </select>
                 </div>
             </div>
 
             <!-- Botón Registrarse -->
-            <button id="btnRegistrarse" class="btn btn-dark col-auto mb-3">Registrarse</button>
+            <button id="btnRegistrarse" class="btn btn-dark col-auto mb-3" type="submit">Registrarse</button>
             <p id="mensajeError" style="color: red;" class="mb-3"></p>
             <div class="">
                 <p>Ya tienes cuenta? <a href="login.html">Inicia sesión aqui</a></p>
