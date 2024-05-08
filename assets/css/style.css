@@ -78,3 +78,7 @@ h3{
 a {
     cursor: pointer;
 }
+
+.mensaje-error {
+    color:red
+}
