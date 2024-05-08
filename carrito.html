@@ -103,6 +103,9 @@
                         <div class="card-body">
                             <!-- Single item -->
                             <div class="row">
+                                <div class="mb-3">
+                                    <p id="mensajeError" style="color: red;" class="mb-3"></p>
+                                </div>
                                 <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
                                     <!-- Image -->
                                     <div class="bg-image hover-overlay hover-zoom ripple rounded"
@@ -138,9 +141,7 @@
                                         </button>
 
                                         <div data-mdb-input-init class="form-outline">
-                                            <input id="form1" min="0" name="quantity" value="1" type="number"
-                                                class="form-control" />
-                                            <label class="form-label" for="form1">Cantidad</label>
+                                            <input id="cantidad" min="0" max="10" name="quantity" value="1" type="number" class="form-control"/>
                                         </div>
 
                                         <button data-mdb-button-init data-mdb-ripple-init
@@ -214,9 +215,9 @@
                                 </li>
                             </ul>
 
-                            <button type="button" data-mdb-button-init data-mdb-ripple-init
+                            <button type="button"
                                 class="btn btn-primary btn-lg btn-block" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">
+                                data-bs-target="#staticBackdrop" id="btn-pagar">
                                 Ir a pagar
                             </button>
 
@@ -240,9 +241,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
                         </div>
                     </div>
                 </div>
@@ -267,6 +265,7 @@
 
 
     <script src="./assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+    <script src="./assets/js/vcarrito.js"></script>
 </body>
 
 </html>

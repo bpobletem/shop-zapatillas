@@ -22,15 +22,10 @@ window.addEventListener('load', () => {
         const nombre = document.getElementById("nombre").value.trim();
         const apellidos = document.getElementById("apellidos").value.trim();
         const rut = document.getElementById("rut").value.trim();
-        const direccion = document.getElementById("direccion").value.trim();
-        const depto = document.getElementById("depto").value.trim();
-        const region = document.getElementById("region").value.trim();
-        const comuna = document.getElementById("comuna").value.trim();
         const telefono = document.getElementById("telefono").value.trim();
         const correo = document.getElementById("email").value.trim();
         const password = document.getElementById("password").value.trim();
         const confirm_password = document.getElementById("confirm_password").value.trim();
-        const fecha_nacimiento = document.getElementById("fecha_nacimiento").value.trim();
 
 
         //Validacion campos completos
@@ -72,23 +67,6 @@ window.addEventListener('load', () => {
             warnings += `Las contraseñas no coinciden. <br>`;
         }
 
-        //Validacion fecha de nacimiento
-        const fechaHoy = new Date();
-        const fechaNacimiento = new Date(fecha_nacimiento);
-
-        //Verificamos que exista la fecha
-        if (!fecha_nacimiento) {
-            warnings += `Por favor, seleccione su fecha de nacimiento. <br>`;
-    
-        }
-        //Verificamos que no sea posterior a la fecha de hoy
-        if (fechaNacimiento > fechaHoy) {
-            warnings += `La fecha de nacimiento no puede ser posterior al día de hoy. <br>`;
-        }
-
-        if (direccion.length < 6) {
-            warnings += `Ingrese una direccion valida. <br>`
-        }
 
         // Mostrar los mensajes de advertencia
         mensajeError.innerHTML = warnings;
