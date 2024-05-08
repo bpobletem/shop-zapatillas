@@ -35,13 +35,24 @@ window.addEventListener('load', () => {
         const errorApellidos = document.getElementById("errorApellidos");
         const errorRut = document.getElementById("errorRut");
         const errorDireccion = document.getElementById("errorDireccion");
-        const errorDepto = document.getElementById("errorDepto");
         const errorRegion = document.getElementById("errorRegion");
         const errorComuna = document.getElementById("errorComuna");
         const errorTelefono = document.getElementById("errorTelefono");
         const errorCorreo = document.getElementById("errorCorreo");
         const errorPassword = document.getElementById("errorPassword");
         const errorFechaNac = document.getElementById("errorFechaNac");
+
+        errorNombre.textContent = "";
+        errorApellidos.textContent = "";
+        errorRut.textContent = "";
+        errorDireccion.textContent = "";
+        errorRegion.textContent = "";
+        errorComuna.textContent = "";
+        errorTelefono.textContent = "";
+        errorCorreo.textContent = "";
+        errorPassword.textContent = "";
+        errorFechaNac.textContent = "";
+
 
 
         //Validacion campos completos
@@ -56,31 +67,31 @@ window.addEventListener('load', () => {
 
         //Validacion apellido
         if (apellidos.length < 2) {
-            warnings += `El apellido es muy corto. <br>`;
+            errorApellidos.innerHTML `El apellido es muy corto. <br>`;
         }
 
         if (!rutFormat.test(rut)) {
-            warnings += `El rut no es valido. <br>`;
+            errorRut.innerHTML `El rut no es valido. <br>`;
         }
         
         //Validacion correo
         if (!mailFormat.test(correo)) {
-            warnings += `El correo no es valido. <br>`;
+            errorCorreo.innerHTML `El correo no es valido. <br>`;
         }
 
         //Validacion telefono solo 9 numeros
         if (!telefonoFormat.test(telefono)) {
-            warnings += `El telefono no es valido. <br>`;
+            errorTelefono.innerHTML `El telefono no es valido. <br>`;
         }
 
         //Validacion password segura
         if (!passFormat.test(password)) {
-            warnings += `La contraseña debe tener al menos un digito, una mayuscula y una minuscula. <br>`;
+            errorPassword.innerHTML += `La contraseña debe tener al menos un digito, una mayuscula y una minuscula. <br>`;
         }
 
         //Validacion passwords coincidan
         if (password !== confirm_password) {
-            warnings += `Las contraseñas no coinciden. <br>`;
+            errorPassword.innerHTML += `Las contraseñas no coinciden. <br>`;
         }
 
         //Validacion fecha de nacimiento
@@ -89,16 +100,16 @@ window.addEventListener('load', () => {
 
         //Verificamos que exista la fecha
         if (!fecha_nacimiento) {
-            warnings += `Por favor, seleccione su fecha de nacimiento. <br>`;
+            errorFechaNac.innerHTML `Por favor, seleccione su fecha de nacimiento. <br>`;
     
         }
         //Verificamos que no sea posterior a la fecha de hoy
         if (fechaNacimiento > fechaHoy) {
-            warnings += `La fecha de nacimiento no puede ser posterior al día de hoy. <br>`;
+            errorFechaNac.innerHTML `La fecha de nacimiento no puede ser posterior al día de hoy. <br>`;
         }
 
         if (direccion.length < 6) {
-            warnings += `Ingrese una direccion valida. <br>`
+            errorDireccion.innerHTML = `Ingrese una direccion valida. <br>`
         }
 
         // Mostrar los mensajes de advertencia
