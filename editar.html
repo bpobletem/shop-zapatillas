@@ -66,7 +66,7 @@
                 </div>
                 <div class="col-12 col-md-6">
                     <!-- Formulario de edición -->
-                    <form action="actualizar_producto.php" method="POST">
+                    <form action="actualizar_producto.php" method="POST" enctype="multipart/form-data">
                         <h3 class="producto-modelo">Air Max Pulse</h3>
                         <p class="text-body-secondary producto-marca mb-2">Nike</p>
                         <label for="precio" class="form-label">Precio:</label>
@@ -80,6 +80,8 @@
                             <option value="38">38</option>
                             <!-- Agregar las demás tallas aquí -->
                         </select>
+                        <label for="imagen" class="form-label">Seleccionar imagen:</label>
+                        <input type="file" id="imagen" name="imagen" class="form-control mb-2" accept="image/*">
                         <button type="button" class="btn btn-dark mb-2" onclick="redirectToAdmin()">Listo</button>
 
                         <script>
@@ -87,6 +89,7 @@
                                 window.location.href = "admin.html";
                             }
                         </script>
+                    </form>
                     </form>
                 </div>
             </div>
