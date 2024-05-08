@@ -14,7 +14,9 @@
     <!-- Navbar -->
     <div class="extra-nav">
         <div class="container d-flex justify-content-end">
-            <a href="pedidos.html" class="me-3">Seguimiento de pedidos</a>      
+            <a href="pedidos.html" class="me-3">Seguimiento de pedidos</a>
+            <span class="me-3">/</span>
+            <a href="registro.html">Registrate</a>
         </div>
     </div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -103,36 +105,42 @@
                 <div class="col-md-6">
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
+                        <p id="errorNombre" class="mensaje-error"></p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="mb-3">
                         <label for="apellidos" class="form-label">Apellidos</label>
-                        <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Apellidos">
+                        <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+                        <p id="errorApellidos" class="mensaje-error"></p>
                     </div>
                 </div>
             </div>
             <div class="mb-3">
                 <label for="rut">RUT</label>
-                <input type="text" class="form-control" id="rut" name="rut" placeholder="12345678-9">
+                <input type="text" class="form-control" id="rut" name="rut" placeholder="12345678-9" required>
+                <p id="errorRut" class="mensaje-error"></p>
             </div>
             <div class="mb-3">
                 <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
-                <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento">
+                <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                <p id="errorFechaNac" class="mensaje-error"></p>
             </div>
 
             <div class="row">
                 <div class="col-md-6">
                     <div class="mb-3">
                         <label for="telefono" class="form-label">Telefono de Contacto</label>
-                        <input type="text" class="form-control" id="telefono" name="telefono" placeholder="912345678">
+                        <input type="text" class="form-control" id="telefono" name="telefono" placeholder="912345678" required>
+                        <p id="errorTelefono" class="mensaje-error"></p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="mb-3">
                         <label for="email" class="form-label">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="juan@correo.cl">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="juan@correo.cl" required>
+                        <p id="errorCorreo" class="mensaje-error"></p>
                     </div>
                 </div>
             </div>
@@ -140,24 +148,27 @@
                 <div class="col-md-6">
                     <div class="mb-3">
                         <label for="password" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="password" name="password">
+                        <input type="password" class="form-control" id="password" name="password" required>
+                        <p id="errorPassword" class="mensaje-error"></p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="mb-3">
                         <label for="confirm_password" class="form-label">Confirmar Contraseña</label>
-                        <input type="password" class="form-control" id="confirm_password" name="confirm_password">
+                        <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
                     </div>
                 </div>
             </div>
 
             <div class="mb-3">
                 <label for="direccion" class="form-label">Dirección</label>
-                <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Avenida Mentira">
+                <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Avenida Mentira" required>
+                <p id="errorDireccion" class="mensaje-error"></p>
             </div>
             <div class=" mb-3">
                 <label for="depto" class="form-label">Departamento o Detalle</label>
-                <input type="text" class="form-control" id="depto" placeholder="Departamento/Detalle" placeholder="123">
+                <input type="text" class="form-control" id="depto" placeholder="Departamento/Detalle" placeholder="123" required>
+                <p id="errorDepto" class="mensaje-error"></p>
             </div>
             <div class="row">
                 <div class="col-md-6 mb-3">
@@ -167,6 +178,7 @@
                         <option value="biobio" id="biobio">Biobio</option>
                         <option value="metropolitana" id="metropolitana">Metropolitana</option>
                     </select>
+                    <p id="errorRegion" class="mensaje-error"></p>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="comuna" class="form-label">Comuna</label>
@@ -175,6 +187,7 @@
                         <option value="biobio" id="biobio">Biobio</option>
                         <option value="metropolitana" id="metropolitana">Metropolitana</option>
                     </select>
+                    <p id="errorComuna" class="mensaje-error"></p>
                 </div>
             </div>
 

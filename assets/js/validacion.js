@@ -31,6 +31,17 @@ window.addEventListener('load', () => {
         const password = document.getElementById("password").value.trim();
         const confirm_password = document.getElementById("confirm_password").value.trim();
         const fecha_nacimiento = document.getElementById("fecha_nacimiento").value.trim();
+        const errorNombre = document.getElementById("errorNombre");
+        const errorApellidos = document.getElementById("errorApellidos");
+        const errorRut = document.getElementById("errorRut");
+        const errorDireccion = document.getElementById("errorDireccion");
+        const errorDepto = document.getElementById("errorDepto");
+        const errorRegion = document.getElementById("errorRegion");
+        const errorComuna = document.getElementById("errorComuna");
+        const errorTelefono = document.getElementById("errorTelefono");
+        const errorCorreo = document.getElementById("errorCorreo");
+        const errorPassword = document.getElementById("errorPassword");
+        const errorFechaNac = document.getElementById("errorFechaNac");
 
 
         //Validacion campos completos
@@ -40,7 +51,7 @@ window.addEventListener('load', () => {
 
         //Validacion nombre
         if (nombre.length < 2) {
-            warnings += `El nombre es muy corto. <br>`;
+            errorNombre.innerHTML = `El nombre es muy corto. <br>`;
         }
 
         //Validacion apellido
