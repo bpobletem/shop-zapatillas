@@ -26,26 +26,31 @@ window.addEventListener('load', () => {
         // Validación de campos completos
         if (nombre === "" || precio === "" || tallas.length === 0 || imagen === "") {
             warnings += `Por favor, complete todos los campos. <br>`;
+            console.log('error')
         }
 
         //Validacion nombre
         if (nombre.length < 2) {
             warnings += `El nombre es muy corto. <br>`;
+            console.log('error')
         }
 
         // Validación de precio
         if (!precioFormat.test(precio)) {
             warnings += `El formato del precio no es válido. <br>`;
+            console.log('error')
         }
 
         // Validación de tallas
         if (tallas.length === 0) {
             warnings += `Por favor, seleccione al menos una talla disponible. <br>`;
+            console.log('error')
         }
 
         // Validación de imagen
         if (!imagen) {
             warnings += `Por favor, seleccione una imagen. <br>`;
+            console.log('error')
         }
 
         // Mostrar los mensajes de advertencia
@@ -55,3 +60,12 @@ window.addEventListener('load', () => {
     }
 
 })
+
+document.getElementById("imagen").addEventListener("change", function() {
+    const file = this.files[0];
+    const fileType = file.type.split("/")[0];
+    if (fileType !== "image") {
+        alert("Por favor, seleccione un archivo de imagen válido.");
+        this.value = ""; // Limpiar el valor del campo de archivo
+    }
+});
