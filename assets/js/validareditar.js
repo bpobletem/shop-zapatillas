@@ -48,8 +48,6 @@ window.addEventListener('load', () => {
             warnings += `Por favor, seleccione una imagen. <br>`;
         }
 
-
-
         // Mostrar los mensajes de advertencia
         mensajeError.innerHTML = warnings;
 
