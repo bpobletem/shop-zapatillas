@@ -101,3 +101,7 @@ a {
 .sidebar a:hover{
     color: #575757;
 }
+
+.mensaje-error {
+    color:red
+}

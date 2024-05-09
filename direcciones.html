@@ -191,33 +191,25 @@
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <div class="mb-3">
-                                            <p id="mensajeError" style="color: red;" class="mb-3"></p>
-                                        </div>
                                         <form id="formulario" action="direcciones.html" method="POST">
                                             <div class="mb-3">
-                                                <label for="calle" class="form-label">Calle</label>
-                                                <input type="text" class="form-control" id="calle"
-                                                    aria-describedby="calle">
+                                                <label for="direccion" class="form-label">Calle</label>
+                                                <input type="text" class="form-control" id="direccion" aria-describedby="calle">
+                                                <p id="errorDireccion" class="mensaje-error"></p>
                                             </div>
                                             <div class="mb-3">
-                                                <label for="numero" class="form-label">Número</label>
-                                                <input type="text" class="form-control" id="numero"
-                                                    aria-describedby="numero">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="depto" class="form-label">Departamento</label>
-                                                <input type="text" class="form-control" id="depto"
-                                                    aria-describedby="depto">
+                                                <label for="depto" class="form-label">Departamento o detalle</label>
+                                                <input type="text" class="form-control" id="depto" aria-describedby="depto">
+                                                <p id="errorDepto" class="mensaje-error"></p>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="region" class="form-label">Region</label>
                                                 <select id="region" class="form-control">
                                                     <option value="">--Selecciona una region--</option>
                                                     <option value="biobio" id="biobio">Biobio</option>
-                                                    <option value="metropolitana" id="metropolitana">Metropolitana
-                                                    </option>
+                                                    <option value="metropolitana" id="metropolitana">Metropolitana</option>
                                                 </select>
+                                                <p id="errorRegion" class="mensaje-error"></p>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="comuna" class="form-label">Comuna</label>
@@ -226,6 +218,7 @@
                                                     <option value="concepcion" id="concepcion">Concepcion</option>
                                                     <option value="talcahuano" id="talcahuano">Talcahuano</option>
                                                 </select>
+                                                <p id="errorComuna" class="mensaje-error"></p>
                                             </div>
                                             <div class="mb-3 form-check">
                                                 <input type="checkbox" class="form-check-input" id="dirdefecto">
@@ -275,7 +268,7 @@
 
 
     <script src="./assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
-    <script src="./assets/js/vperfil.js"></script>
+    <script src="./assets/js/vdireccion.js"></script>
 </body>
 
 </html>
