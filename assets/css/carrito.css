@@ -33,6 +33,15 @@ h3{
     font-size: 1.3rem;
 }
 
+.extra-nav {
+    font-size: .9rem;
+    padding: .4rem;
+}
+
+.extra-nav a{
+    color: #000;
+}
+
 
 .footer-container {
     text-align: right;

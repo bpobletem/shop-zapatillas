@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <!-- Navbar -->
+    <!-- Mini navbar -->
     <div class="extra-nav">
         <div class="container d-flex justify-content-end">
             <a href="pedidos.html" class="me-3">Seguimiento de pedidos</a>
@@ -19,6 +19,8 @@
             <a href="registro.html">Registrate</a>
         </div>
     </div>
+
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand pe-3 ms-5" href="#">
@@ -96,11 +98,11 @@
     </nav>
 
     <!-- Contenido de la página -->
-    <div class="container mt-5">
+    <div class="container mt-5 col-12 col-md-6 mx-auto">
         <!-- Título del formulario -->
         <h3 id="registro" class="text-center mb-4">Registro de Usuario</h3>
         <!-- Formulario de registro -->
-        <form id="formulario" class="formulario" action="login.html" method="POST">
+        <form id="formulario" class="" action="login.html" method="POST">
             <div class="row">
                 <div class="col-md-6">
                     <div class="mb-3">
@@ -193,7 +195,7 @@
 
             <!-- Botón Registrarse -->
             <button id="btnRegistrarse" class="btn btn-dark col-auto mb-3" type="submit">Registrarse</button>
-            <p id="mensajeError" style="color: red;" class="mb-3"></p>
+            <p id="mensajeError" class="mb-3 mensaje-error"></p>
             <div class="">
                 <p>Ya tienes cuenta? <a href="login.html">Inicia sesión aqui</a></p>
             </div>

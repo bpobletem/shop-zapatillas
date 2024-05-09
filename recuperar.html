@@ -7,10 +7,18 @@
     <title>Recuperar Contraseña</title>
     <link rel="stylesheet" href="assets/bootstrap-5.3.3-dist/css/bootstrap.css">
     <script src="https://kit.fontawesome.com/3e6ff9a951.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+    <!-- Mini navbar -->
+    <div class="extra-nav">
+        <div class="container d-flex justify-content-end">
+            <a href="pedidos.html" class="me-3">Seguimiento de pedidos</a>
+            <span class="me-3">/</span>
+            <a href="registro.html">Registrate</a>
+        </div>
+    </div>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -90,17 +98,19 @@
     <!-- Fin Navbar -->
 
     <!-- Contenido de la página -->
-    <div class="container mt-5">
+    <div class="container mt-5 col-12 col-md-6">
         <!-- Título del formulario -->
         <h3 class="text-center mb-4">Recuperar Contraseña</h3>
         <!-- Formulario de recuperación de contraseña -->
-        <form action="index.html" method="POST">
+        <form action="index.html" method="GET">
             <div class="mb-3">
                 <label for="correo" class="form-label">Correo Electrónico</label>
                 <input type="email" class="form-control" id="correo" name="correo" required>
+                <p id="errorCorreo" class="mensaje-error"></p>
             </div>
-            <div class="mx-auto text-center">
-                <button type="submit" class="btn btn-dark col-6">Enviar Instrucciones</button>
+            <div class="">
+                <button type="submit" class="btn btn-dark me-auto">Enviar instrucciones</button>
+                <p id="mensajeError" class="mensaje-error"></p>
             </div>
         </form>
     </div>
@@ -128,6 +138,7 @@
     </footer>
 
     <script src="assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+    <script src="./assets/js/vlogin.js"></script>
 </body>
 
 </html>

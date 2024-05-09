@@ -12,10 +12,9 @@ window.addEventListener('load', () => {
         // Reseteamos los errores
         mensajeError.innerHTML = "";
 
-        // Declaramos variables para comenzar las validaciones
-        let warnings = '';
+        // Declaramos las regex para validar
         const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        const passFormat = /^(?=.*\d)(?=.*[a-záéíóúüñ]).*[A-ZÁÉÍÓÚÜÑ]/; //1 digito, 1 mayuscula, 1 minuscula
+        const passFormat = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/; //1 numero, 1 mayuscula, 1 minuscula min 6 caracteres
         const telefonoFormat = /^9\d{8}$/;
         const rutFormat = /^\d{7,8}-[\dkK]$/;
         
@@ -42,56 +41,64 @@ window.addEventListener('load', () => {
         const errorPassword = document.getElementById("errorPassword");
         const errorFechaNac = document.getElementById("errorFechaNac");
 
-        errorNombre.textContent = "";
-        errorApellidos.textContent = "";
-        errorRut.textContent = "";
-        errorDireccion.textContent = "";
-        errorRegion.textContent = "";
-        errorComuna.textContent = "";
-        errorTelefono.textContent = "";
-        errorCorreo.textContent = "";
-        errorPassword.textContent = "";
-        errorFechaNac.textContent = "";
+        errorNombre.innerHTML = "";
+        errorApellidos.innerHTML = "";
+        errorRut.innerHTML = "";
+        errorDireccion.innerHTML = "";
+        errorRegion.innerHTML = "";
+        errorComuna.innerHTML = "";
+        errorTelefono.innerHTML = "";
+        errorCorreo.innerHTML = "";
+        errorPassword.innerHTML = "";
+        errorFechaNac.innerHTML = "";
 
 
 
         //Validacion campos completos
-        if (nombre === "" || apellidos === "" || rut === "" || direccion === "" || depto === "" || region === "" || comuna === "" || telefono === "" || correo === "" || password === "" || confirm_password === "" || fecha_nacimiento === "") {
-            warnings += "Por favor, complete todos los campos.<br>";
+        if (nombre === "" || apellidos === "" || rut === "" || direccion === "" || region === "" || comuna === "" || telefono === "" || correo === "" || password === "" || confirm_password === "" || fecha_nacimiento === "") {
+            mensajeError.innerHTML = "Por favor, complete todos los campos.<br>";
+            return false;
         }
 
         //Validacion nombre
         if (nombre.length < 2) {
             errorNombre.innerHTML = `El nombre es muy corto. <br>`;
+            return false;
         }
 
         //Validacion apellido
         if (apellidos.length < 2) {
             errorApellidos.innerHTML `El apellido es muy corto. <br>`;
+            return false;
         }
 
         if (!rutFormat.test(rut)) {
             errorRut.innerHTML `El rut no es valido. <br>`;
+            return false;
         }
         
         //Validacion correo
         if (!mailFormat.test(correo)) {
             errorCorreo.innerHTML `El correo no es valido. <br>`;
+            return false;
         }
 
         //Validacion telefono solo 9 numeros
         if (!telefonoFormat.test(telefono)) {
             errorTelefono.innerHTML `El telefono no es valido. <br>`;
+            return false;
         }
 
         //Validacion password segura
         if (!passFormat.test(password)) {
             errorPassword.innerHTML += `La contraseña debe tener al menos un digito, una mayuscula y una minuscula. <br>`;
+            return false;
         }
 
         //Validacion passwords coincidan
         if (password !== confirm_password) {
             errorPassword.innerHTML += `Las contraseñas no coinciden. <br>`;
+            return false;
         }
 
         //Validacion fecha de nacimiento
@@ -101,21 +108,21 @@ window.addEventListener('load', () => {
         //Verificamos que exista la fecha
         if (!fecha_nacimiento) {
             errorFechaNac.innerHTML `Por favor, seleccione su fecha de nacimiento. <br>`;
-    
+            return false;
         }
         //Verificamos que no sea posterior a la fecha de hoy
         if (fechaNacimiento > fechaHoy) {
             errorFechaNac.innerHTML `La fecha de nacimiento no puede ser posterior al día de hoy. <br>`;
+            return false;
         }
 
         if (direccion.length < 6) {
             errorDireccion.innerHTML = `Ingrese una direccion valida. <br>`
+            return false;
         }
 
-        // Mostrar los mensajes de advertencia
-        mensajeError.innerHTML = warnings;
-
-    
+        //Submit del formulario en caso de pasar las validaciones
+        form.submit();
     }
     
 })

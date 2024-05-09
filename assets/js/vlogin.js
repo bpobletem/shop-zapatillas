@@ -13,25 +13,35 @@ window.addEventListener('load', () => {
         mensajeError.innerHTML = "";
 
         //Variables
-        let warnings = ''
         const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        const passFormat = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/; //1 numero, 1 mayuscula, 1 minuscula min 6 caracteres
         
         //Seleccionamos los elementos
         const correo = document.getElementById("correo").value.trim();
         const password = document.getElementById("password").value.trim();
+        const errorCorreo = document.getElementById("errorCorreo");
+        const errorPassword = document.getElementById("errorPassword");
 
         //Validacion campos completos
         if (correo === "" || password === "") {
-            warnings += "Por favor, complete todos los campos.<br>";
+            mensajeError.innerHTML = "Por favor, complete todos los campos.<br>";
+            return false;
+        }
+
+        if (!passFormat.test(password)) {
+            errorPassword.innerHTML = "Por favor, ingrese una clave valida"
+            return false;
         }
 
         //Validacion correo
         if (!mailFormat.test(correo)) {
-            warnings += `El correo no es valido. <br>`;
+            errorCorreo.innerHTML = `El correo no es valido.`;
+            return false;
         }
 
-        // Mostrar los mensajes de advertencia
-        mensajeError.innerHTML = warnings;
+        form.submit();
+
+
     
     }
     

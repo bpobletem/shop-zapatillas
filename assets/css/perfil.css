@@ -33,6 +33,15 @@ h3{
     gap: .5rem;
 }
 
+.extra-nav {
+    font-size: .9rem;
+    padding: .4rem;
+}
+
+.extra-nav a{
+    color: #000;
+}
+
 
 .card:hover {
     cursor: pointer;
