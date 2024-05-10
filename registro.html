@@ -7,14 +7,23 @@
     <title>Administración - Registro de Usuario</title>
     <link rel="stylesheet" href="assets/bootstrap-5.3.3-dist/css/bootstrap.css">
     <script src="https://kit.fontawesome.com/3e6ff9a951.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+    <!-- Mini navbar -->
+    <div class="extra-nav">
+        <div class="container d-flex justify-content-end">
+            <a href="pedidos.html" class="me-3">Seguimiento de pedidos</a>
+            <span class="me-3">/</span>
+            <a href="registro.html">Registrate</a>
+        </div>
+    </div>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand pe-3 ms-4" href="#">
+            <a class="navbar-brand pe-3 ms-5" href="#">
                 <img src="assets/images/logo.png" alt="Bootstrap" width="56">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -23,18 +32,65 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="text-align: right;">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="admin.html">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="totalpedidos.html">Pedidos</a>
+                        <a class="nav-link" aria-current="page" href="categoria.html">Ofertas</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Marcas
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="categoria.html">Adidas</a></li>
+                            <li><a class="dropdown-item" href="categoria.html">Nike</a></li>
+                            <li><a class="dropdown-item" href="categoria.html">Jordan</a></li>
+                            <li><a class="dropdown-item" href="categoria.html">Puma</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Categorías
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="categoria.html">Estilo de vida</a></li>
+                            <li><a class="dropdown-item" href="categoria.html">Futbol</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="totalusuarios.html">Usuarios</a>
+                        <a class="nav-link" aria-current="page" href="admin.html">Panel Admin</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="editar.html">Editar productos</a>
+                </ul>
+                <ul class="navbar-nav ms-auto me-4 mb-2 mb-lg-0">
+                    <li class="nav-item d-flex mx-auto">
+                        <input class="form-control me-2 ms-4" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-secondary" type="submit">Search</button>
+                    </li>
+
+                </ul>
+
+                <ul class="navbar-nav me-5 mb-2 mb-lg-0 d-flex flex-row align-items-center gap-3">
+
+                    <li class="nav-item shopping-cart">
+                        <a href="carrito.html">
+                            <i class="fa-solid fa-cart-shopping text-body-secondary"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropstart profile">
+                        <a href="#" class="nav-link dropdown-toggle " role="button" data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html">Iniciar sesión</a></li>
+                            <li><a class="dropdown-item" href="registro.html">Registro</a></li>
+                            <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
+                            <li><a class="dropdown-item" href="index.html">Cerrar sesión</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -44,40 +100,51 @@
     <!-- Fin Navbar -->
 
     <!-- Contenido de la página -->
-    <div class="container mt-5">
+    <div class="container mt-5 col-12 col-md-6 mx-auto">
         <!-- Título del formulario -->
         <h3 id="registro" class="text-center mb-4">Registro de Usuario</h3>
         <!-- Formulario de registro -->
-        <form action="procesar_registro.php" method="POST">
+        <form id="formulario" class="" action="login.html" method="POST">
             <div class="row">
                 <div class="col-md-6">
                     <div class="mb-3">
-                        <label for="nombres" class="form-label">Nombres</label>
-                        <input type="text" class="form-control" id="nombres" name="nombres" required>
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
+                        <p id="errorNombre" class="mensaje-error"></p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="mb-3">
                         <label for="apellidos" class="form-label">Apellidos</label>
-                        <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+                        <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+                        <p id="errorApellidos" class="mensaje-error"></p>
                     </div>
                 </div>
             </div>
             <div class="mb-3">
-                <label for="direccion" class="form-label">Dirección</label>
-                <input type="text" class="form-control" id="direccion" name="direccion" required>
+                <label for="rut">RUT (sin puntos y con guion)</label>
+                <input type="text" class="form-control" id="rut" name="rut" placeholder="12345678-9" required>
+                <p id="errorRut" class="mensaje-error"></p>
             </div>
+            <div class="mb-3">
+                <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                <p id="errorFechaNac" class="mensaje-error"></p>
+            </div>
+
             <div class="row">
                 <div class="col-md-6">
                     <div class="mb-3">
-                        <label for="fono" class="form-label">Fono de Contacto</label>
-                        <input type="text" class="form-control" id="fono" name="fono" required>
+                        <label for="telefono" class="form-label">Telefono de Contacto</label>
+                        <input type="text" class="form-control" id="telefono" name="telefono" placeholder="912345678" required>
+                        <p id="errorTelefono" class="mensaje-error"></p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="mb-3">
                         <label for="email" class="form-label">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="juan@correo.cl" required>
+                        <p id="errorCorreo" class="mensaje-error"></p>
                     </div>
                 </div>
             </div>
@@ -86,22 +153,56 @@
                     <div class="mb-3">
                         <label for="password" class="form-label">Contraseña</label>
                         <input type="password" class="form-control" id="password" name="password" required>
+                        <input type="checkbox" class="me-2" onclick="showPass()">Mostrar contraseña
+                        <p id="errorPassword" class="mensaje-error"></p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="mb-3">
                         <label for="confirm_password" class="form-label">Confirmar Contraseña</label>
-                        <input type="password" class="form-control" id="confirm_password" name="confirm_password"
-                            required>
+                        <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
+                        <input type="checkbox" class="me-2" onclick="showConfirmPass()">Mostrar contraseña
                     </div>
                 </div>
             </div>
+
             <div class="mb-3">
-                <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
-                <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                <label for="direccion" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Avenida Mentira" required>
+                <p id="errorDireccion" class="mensaje-error"></p>
             </div>
+            <div class=" mb-3">
+                <label for="depto" class="form-label">Departamento o Detalle</label>
+                <input type="text" class="form-control" id="depto" placeholder="Departamento/Detalle" placeholder="123" >
+                <p id="errorDepto" class="mensaje-error"></p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="region" class="form-label">Región</label>
+                    <select id="region" class="form-control">
+                        <option value="">--Selecciona una region--</option>
+                        <option value="biobio" id="biobio">Biobio</option>
+                        <option value="metropolitana" id="metropolitana">Metropolitana</option>
+                    </select>
+                    <p id="errorRegion" class="mensaje-error"></p>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="comuna" class="form-label">Comuna</label>
+                    <select id="comuna" class="form-control">
+                        <option value="">--Selecciona una comuna--</option>
+                        <option value="biobio" id="biobio">Biobio</option>
+                        <option value="metropolitana" id="metropolitana">Metropolitana</option>
+                    </select>
+                    <p id="errorComuna" class="mensaje-error"></p>
+                </div>
+            </div>
+
             <!-- Botón Registrarse -->
-            <a href="index.html" id="btnRegistrarse" class="btn btn-dark ">Registrarse</a>
+            <button id="btnRegistrarse" class="btn btn-dark col-auto mb-3" type="submit">Registrarse</button>
+            <p id="mensajeError" class="mb-3 mensaje-error"></p>
+            <div class="">
+                <p>Ya tienes cuenta? <a href="login.html">Inicia sesión aqui</a></p>
+            </div>
         </form>
     </div>
 
@@ -120,6 +221,7 @@
     </footer>
 
     <script src="assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+    <script src="./assets/js/validacion.js"></script>
 </body>
 
 </html>

@@ -29,15 +29,6 @@ h3{
     font-size: 1.3rem;
 }
 
-.extra-nav {
-    font-size: .9rem;
-    padding: .4rem;
-}
-
-.extra-nav a{
-    color: #000;
-}
-
 .card-wrapper {
     padding: .5rem;
     gap: .5rem;
@@ -49,20 +40,6 @@ h3{
     box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.2);
 }
 
-.categorias-populares {
-    font-size: 2.5rem;
-    font-weight: 500;
-    border-bottom: 1px solid #000;
-    margin-bottom: 5px;
-    color: #000;
-    margin: 1rem;
-}
-
-.categorias-populares:hover {
-    border-bottom: 5px solid #000;
-    margin-bottom: 0;
-    cursor: pointer;
-}
 
 .footer-container {
     text-align: right;
@@ -79,6 +56,19 @@ a {
     cursor: pointer;
 }
 
-.mensaje-error {
-    color:red
+.img-btn {
+    border-radius: 50%;
+    font-size: .8rem;
+    color: #000;
+    background-color: #fff;
+}
+
+.product-img {
+    position: relative;
+}
+
+.img-buttons {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
 }

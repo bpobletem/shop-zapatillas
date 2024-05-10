@@ -38,10 +38,6 @@ h3{
     color: #000;
 }
 
-.card-wrapper {
-    padding: .5rem;
-    gap: .5rem;
-}
 
 
 .card:hover {
@@ -49,19 +45,15 @@ h3{
     box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.2);
 }
 
-.categorias-populares {
-    font-size: 2.5rem;
-    font-weight: 500;
-    border-bottom: 1px solid #000;
-    margin-bottom: 5px;
-    color: #000;
-    margin: 1rem;
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.categorias-populares:hover {
-    border-bottom: 5px solid #000;
-    margin-bottom: 0;
-    cursor: pointer;
+
+.order-by ul {
+    font-size: .8rem;
 }
 
 .footer-container {
@@ -77,8 +69,4 @@ h3{
 
 a {
     cursor: pointer;
-}
-
-.mensaje-error {
-    color:red
 }
