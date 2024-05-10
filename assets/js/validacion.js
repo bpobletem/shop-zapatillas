@@ -100,7 +100,7 @@ window.addEventListener('load', () => {
 
         //Validacion telefono solo 9 numeros
         if (!telefonoFormat.test(telefono)) {
-            errorTelefono.innerHTML = `El telefono no es valido.`;
+            errorTelefono.innerHTML = `El telefono no es valido. Formato: 912345678`;
             return false;
         }
 
